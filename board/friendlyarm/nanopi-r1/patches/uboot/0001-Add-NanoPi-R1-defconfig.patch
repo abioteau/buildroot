@@ -1,0 +1,32 @@
+From daa67573999b420da934c33887bde74904f9c239 Mon Sep 17 00:00:00 2001
+From: Adrien Bioteau <adrien.bioteau@thalesgroup.com>
+Date: Thu, 11 Sep 2025 11:01:26 +0200
+Subject: [PATCH] Add NanoPi R1 defconfig
+
+---
+ configs/nanopi_r1_defconfig | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 configs/nanopi_r1_defconfig
+
+diff --git a/configs/nanopi_r1_defconfig b/configs/nanopi_r1_defconfig
+new file mode 100644
+index 00000000000..aee8eac781c
+--- /dev/null
++++ b/configs/nanopi_r1_defconfig
+@@ -0,0 +1,13 @@
++CONFIG_ARM=y
++CONFIG_ARCH_SUNXI=y
++CONFIG_DEFAULT_DEVICE_TREE="sun8i-h3-nanopi-r1"
++CONFIG_SPL=y
++CONFIG_MACH_SUN8I_H3=y
++CONFIG_DRAM_CLK=408
++# CONFIG_VIDEO_DE2 is not set
++# CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
++CONFIG_MMC_SUNXI_SLOT_EXTRA=2
++CONFIG_CONSOLE_MUX=y
++CONFIG_SUN8I_EMAC=y
++CONFIG_USB_EHCI_HCD=y
++CONFIG_USB_OHCI_HCD=y
+-- 
+2.43.0
+

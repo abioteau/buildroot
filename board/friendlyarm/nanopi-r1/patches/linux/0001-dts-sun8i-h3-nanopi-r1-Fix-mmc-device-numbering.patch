@@ -1,0 +1,25 @@
+From 64b8b2f1163e1cc81dfc9091c9cb136586accf3e Mon Sep 17 00:00:00 2001
+From: Adrien Bioteau <adrien.bioteau@thalesgroup.com>
+Date: Fri, 12 Sep 2025 15:50:59 +0200
+Subject: [PATCH] dts: sun8i-h3-nanopi-r1: Fix mmc device numbering
+
+---
+ arch/arm/boot/dts/allwinner/sun8i-h3-nanopi-r1.dts | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/arch/arm/boot/dts/allwinner/sun8i-h3-nanopi-r1.dts b/arch/arm/boot/dts/allwinner/sun8i-h3-nanopi-r1.dts
+index 42cd1131adf3..101ae5e2d2da 100644
+--- a/arch/arm/boot/dts/allwinner/sun8i-h3-nanopi-r1.dts
++++ b/arch/arm/boot/dts/allwinner/sun8i-h3-nanopi-r1.dts
+@@ -13,6 +13,8 @@ / {
+ 	compatible = "friendlyarm,nanopi-r1", "allwinner,sun8i-h3";
+ 
+ 	aliases {
++		mmc0 = &mmc0;
++		mmc1 = &mmc2;
+ 		serial1 = &uart1;
+ 		ethernet0 = &emac;
+ 		ethernet1 = &wifi;
+-- 
+2.43.0
+
